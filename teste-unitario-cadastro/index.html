@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <title>Cadastro</title>
+</head>
+<body>
+  <header>
+    <div class="back">
+      <i class="fa-solid fa-arrow-left"></i>
+      <p>Voltar</p>
+    </div>
+    <img src="./images/logo.svg" alt="">
+    <div class="security">
+      <p class="bar">|</p>
+      <i class="fa-solid fa-lock"></i>
+      <p>Ambiente Seguro</p>
+    </div>
+  </header>
+  <div class="form">
+    <h1>Criar sua conta</h1>
+    <form id="form-cadastro" onsubmit="return false;">
+      <div id="radio">
+        <input type="radio" name="pf" id="pf" checked>
+        <label for="pf">Pessoa Física</label>
+        <input type="radio" name="pj" id="pj">
+        <label for="pj">Pessoa Jurídica</label>
+      </div>
+      <label for="name">Nome e sobrenome</label>
+      <input type="text" id="name" name="name" placeholder="Digite seu nome e sobrenome" required>
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+      <label for="phone">Telefone</label>
+      <input type="tel" id="phone" name="phone" placeholder="DDD + Telefone" required>
+      <label for="date">Data de Nascimento</label>
+      <input type="date" id="date" name="date" required>
+      <label for="cpf">CPF</label>
+      <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required>
+      <div class="password-container">
+        <div>
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+        </div>
+        <div>
+          <label for="confirm">Confirmar senha</label>
+          <input type="password" id="confirm" name="confirm" placeholder="Confirme sua senha" required>
+        </div>
+      </div>
+      <div id="rules">
+        <p>Padrão de senha</p>
+        <div id="list">
+          <ul id="list1">
+            <li>Mínimo 8 caracteres</li>
+            <li>Minúscula</li>
+          </ul>
+          <ul id="list2">
+            <li>Maiúscula</li>
+            <li>Número</li>
+          </ul>
+        </div>
+      </div>
+      <div id="checkbox">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">Concordo com os <a href="#">termos e condições</a></label>
+      </div>
+      <button type="submit" id="cadastrar">CADASTRAR</button>
+    </form>
+    <p id="mensagem"></p>
+  </div>
+  <footer>
+    <div>
+      <hr>
+    </div>
+    <div class="footer-text">
+      <i class="fa-regular fa-copyright"></i>
+      <p>Copyright 2023 | Todos os direitos reservados à Animal Care</p></div>
+  </footer>
+  <script src="cadastro.js" defer></script>
+</body>
+</html>
