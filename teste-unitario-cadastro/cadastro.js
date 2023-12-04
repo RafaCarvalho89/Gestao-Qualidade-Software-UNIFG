@@ -72,11 +72,11 @@ function salvarCadastro(nome, email, telefone, data, senha, confirm, cpf, terms)
   if (erro) {
     return erro;
   }
-  // Se não houver erro, criar um objeto com as informações do cadastro
+  // Se não houver erro, cria um objeto com as informações do cadastro
   let cadastro = criarCadastro(nome, email, telefone, data, senha, cpf);
   // Adicionar o objeto no array de cadastros
   cadastros.push(cadastro);
-  // Retornar o objeto criado
+  // Retornar mensagem de sucesso
   if (!erro){
     mensagem = "Cadastro realizado com sucesso!";
     return mensagem;
@@ -94,27 +94,6 @@ function obterCadastro(email) {
   }
   // Se não encontrar nenhum cadastro com o email informado, retornar null
   return null;
-}
-
-// Função para atualizar um cadastro pelo email
-function atualizarCadastro(email, novosDados) {
-  // Obter o cadastro pelo email
-  let cadastro = obterCadastro(email);
-  // Se o cadastro existir, atualizar os dados do cadastro com os novos dados
-  if (cadastro) {
-    cadastro.nome = novosDados.nome || cadastro.nome;
-    cadastro.email = novosDados.email || cadastro.email;
-    cadastro.telefone = novosDados.telefone || cadastro.telefone;
-    cadastro.data = novosDados.data || cadastro.data;
-    cadastro.senha = novosDados.senha || cadastro.senha;
-    cadastro.cpf = novosDados.cpf || cadastro.cpf;
-    // Retornar uma mensagem de sucesso
-    return "Cadastro atualizado com sucesso";
-  }
-  // Se o cadastro não existir, retornar um erro
-  else {
-    return "Cadastro não encontrado";
-  }
 }
 
 // Função para mostrar uma mensagem na tela

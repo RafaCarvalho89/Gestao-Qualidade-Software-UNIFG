@@ -6,7 +6,6 @@ document.querySelector('.loginForm').addEventListener('submit', function(event) 
   var users = {
       'usuario1': 'senha1',
       'usuario2': 'senha2',
-      // adicione mais usuários conforme necessário
   };
 
   var username = document.getElementById('username').value;
